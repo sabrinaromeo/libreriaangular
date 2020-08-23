@@ -1,0 +1,25 @@
+<h1>Mis Libros</h1>
+<div class="container">
+<table>
+    <thead>
+        <tr>
+            <!--<th>id</th>-->
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>Genero</th>
+            <th>Prestado a...</th>
+            <th>Prestar a...</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= 'let libro of libros'>
+            <td>{{libro.name}}</td>
+            <td>{{libro.author}}</td>
+            <td>{{libro.gender}}</td>
+            <td>{{libro.lended}}</td>
+            <td><input type="text" placeholder="nombre"></td>
+            <td><button>actualizar</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,12 @@
+<app-nuevolibro (nuevoLibro)="agregarLibroABiblioteca()"></app-nuevolibro> <!--nuevoLibro es el emmiter de nuevolibro, el agregarLibroABiblioteca va a ser la funcion que se ejecutara en le ts del contenedor, el $event es el click de agregar-->
+<app-libreria [libros]='lista'></app-libreria><!--EN EL ARRAY LIBROS DEL componente LIBRERIA iran todos lo que el padre(contenedor) tiene en su varialble/array lista, lo que pase en LISTA automaticamente se modificara en LIBROS--> 
+
+
+<!--IMPORTANTE!!!
+ CUANDO HAY  (xxxx)= "xxxxx()" -> cuando el partenesis esta a la izquieda del igual la informacion va de izquierda a derecha donde la informacion de la derecha se igualara a la de la izquierda
+
+ cuando hay [xxx]="xxxx"-> cuando hay corchetes = parentesis  la informacion/variable se igualara a la info de la  derecha, se lee de derecha a izquierda.
+
+ si la info esta [()] -> bananas in the box LA INFO ES DE DOBLE VIA, el valor se puede modificar tanto de un lado como del otro
+
+-->

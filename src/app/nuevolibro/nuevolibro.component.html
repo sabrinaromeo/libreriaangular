@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Formulario de Libro</h1>
+
+<form (ngSubmit)="agregarLibro()">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" [(ngModel)]="book.name">
+
+    <label for="author">Autor</label>
+    <input type="text" id="author" name="author" [(ngModel)]="book.author">
+
+    <label for="lended">Prestado a...</label>
+    <input type="text" id="lended" name="lended" [(ngModel)]="book.lended">
+
+    <label for="gender">Genero</label>
+    <select name="gender" id="gender" [(ngModel)]="book.gender">
+        <option *ngFor="let genero of genders" [value]="genero.id">{{genero.name}}</option>
+    </select>
+
+    <button type="submit">Agregar</button>
+
+</form>
+</div>
