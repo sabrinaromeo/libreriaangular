@@ -42,21 +42,4 @@ export class LibrosService {
 
   }
 
-
-  async listaGeneros(){
-
-    try{ 
-      let generos:any;
-  
-      generos= await this.http.get(this.url+"genero").toPromise();
-      
-      return generos;
-    }
-   catch(error){
-    console.log(error);
-    }
-   }
-
-
-
 }
