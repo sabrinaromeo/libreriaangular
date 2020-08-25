@@ -13,7 +13,7 @@
 
     <label for="gender">Genero</label>
     <select name="gender" id="gender" [(ngModel)]="book.gender">
-        <option *ngFor="let genero of genders" [value]="genero.id">{{genero.name}}</option>
+        <option *ngFor="let genero of genders" [value]="genero.id" [name]='genero.name'>{{genero.name}}</option>
     </select>
 
     <button type="submit">Agregar</button>

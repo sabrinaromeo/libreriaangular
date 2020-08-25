@@ -38,7 +38,7 @@ export class NuevolibroComponent implements OnInit {
 
   this.nuevoLibro.emit(); //  este emiter le avisa al padre que hay un nuevo libro (book) cagado por el usuario
   
-  console.log(respuesta);
+  console.log(this.book);
   }
 
 

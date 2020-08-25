@@ -16,8 +16,8 @@
             <td>{{libro.name}}</td>
             <td>{{libro.author}}</td>
             <td>{{libro.gender}}</td>
-            <td>{{libro.lended}}</td>
-            <td><input type="text" placeholder="nombre"></td>
+            <!--<td>{{libro.lended}}</td>-->
+            <td><input type="text" placeholder="nombre" id="lended" [value]="libro.lended"></td>
             <td><button>actualizar</button></td>
         </tr>
     </tbody>

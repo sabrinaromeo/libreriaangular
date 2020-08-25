@@ -27,7 +27,6 @@ export class LibrosService {
     }
   }
 
-
    async listaDeLibros(){ //esta funcion pide todos los libros que tengo en mi biblioteca
 
     try{
@@ -41,7 +40,6 @@ export class LibrosService {
     }
 
   }
-
 
   async listaGeneros(){
 
@@ -57,6 +55,10 @@ export class LibrosService {
     }
    }
 
-
+   /*async nuevaPersona(){
+     let persona:any;
+     persona= await this.http.put(this.url+"libro/:id",persona).toPromise();
+     return persona;
+   }*/
 
 }
