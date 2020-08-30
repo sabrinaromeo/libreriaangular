@@ -1,0 +1,13 @@
+.footer{
+    background-color: rgba(25, 26, 26, 0.76);
+    margin-bottom: 0px;
+    height: auto;
+    color: floralwhite;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+.footer ul li{
+    list-style: none;
+}

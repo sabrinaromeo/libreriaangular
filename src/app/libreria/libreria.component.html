@@ -1,25 +1,35 @@
-<h1>Mis Libros</h1>
-<div class="container">
-<table>
-    <thead>
-        <tr>
-            <!--<th>id</th>-->
-            <th>Nombre</th>
-            <th>Autor</th>
-            <th>Genero</th>
-            <th>Prestado a...</th>
-            <th>Prestar a...</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor= 'let libro of libros'>
-            <td>{{libro.name}}</td>
-            <td>{{libro.author}}</td>
-            <td>{{libro.gender}}</td>
-            <!--<td>{{libro.lended}}</td>-->
-            <td><input type="text" placeholder="nombre" id="{{libro.id}}"  [value]="libro.lended"></td>
-            <td><button (click)="cambiarLended(libro.id)">actualizar</button></td><!--esto-->
-        </tr>
-    </tbody>
-</table>
+<div class="container fondo">
+    <hr>
+    <div class="row">
+        <div class="col-12 text-center text-primary">
+            <h1>Mis Libros</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <!--<th>id</th>-->
+                        <th>Nombre</th>
+                        <th>Autor</th>
+                        <th>Genero</th>
+                        <th>Prestado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let libro of libros'>
+                        <td>{{libro.name}}</td>
+                        <td>{{libro.author}}</td>
+                        <td>{{libro.gender}}</td>
+                        <!--<td>{{libro.lended}}</td>-->
+                        <td><input type="text" placeholder="nombre" id="{{libro.id}}" [value]="libro.lended"></td>
+                        <td><button (click)="cambiarLended(libro.id)" class="btn btn-primary">actualizar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

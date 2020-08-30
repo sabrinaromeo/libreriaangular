@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ContenedorComponent } from './contenedor/contenedor.component';
 import { NuevolibroComponent } from './nuevolibro/nuevolibro.component';
 import { LibreriaComponent } from './libreria/libreria.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContenedorComponent,
     NuevolibroComponent,
-    LibreriaComponent
+    LibreriaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

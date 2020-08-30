@@ -1,7 +1,7 @@
 <app-nuevolibro (nuevoLibro)="agregarLibroABiblioteca()"></app-nuevolibro> <!--nuevoLibro es el emmiter de nuevolibro, el agregarLibroABiblioteca va a ser la funcion que se ejecutara en le ts del contenedor, el $event es el click de agregar-->
 <app-libreria [libros]='libros'></app-libreria><!--EN EL ARRAY LIBROS DEL componente LIBRERIA iran todos lo que el padre(contenedor) tiene en su varialble/array lista, lo que pase en LISTA automaticamente se modificara en LIBROS--> 
 
-
+<app-footer></app-footer>
 <!--IMPORTANTE!!!
  CUANDO HAY  (xxxx)= "xxxxx()" -> cuando el partenesis esta a la izquieda del igual la informacion va de izquierda a derecha donde la informacion de la derecha se igualara a la de la izquierda
 
