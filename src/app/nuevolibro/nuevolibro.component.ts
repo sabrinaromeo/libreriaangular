@@ -14,6 +14,7 @@ export class NuevolibroComponent implements OnInit
   @Output() nuevoLibro = new EventEmitter();
 
   book = {
+    id:'',
     name: '',
     gender: '',
     author: '',
@@ -31,8 +32,7 @@ export class NuevolibroComponent implements OnInit
     console.log(this.genders);
   }
 
-  async agregarLibro()
-  { //este metodo se da apartir del click del usuario
+  async agregarLibro(){ //este metodo se da apartir del click del usuario
 
     let respuesta: any;
 

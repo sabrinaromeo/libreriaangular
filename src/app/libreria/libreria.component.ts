@@ -10,21 +10,21 @@ export class LibreriaComponent implements OnInit {
 
   @Input() libros=[]  //este array va a recibir LOS NUEVOS LIBROS cargados del formulario  atraves del CONTENDOR
 
- 
 
-  constructor() { }
+  constructor(private librosService:LibrosService) { }
 
   ngOnInit(): void {
-
   }
-  /*
-  prestado = document.getElementById('lended').textContent;
+  
+//tomamos los valores para actualizar  la persona aquien se lo prestamos
+cambiarLended(idLibro){
+    
+    let lended=(<HTMLInputElement>document.getElementById(idLibro)).value;
 
-  async guardarPersona(prestado){
-   let persona:any;
-   persona= await this.librosService.nuevaPersona();
-  }
-  */
- 
+      this.librosService.actualizarLended(idLibro, lended);
+     
+}
+
+
 
 }

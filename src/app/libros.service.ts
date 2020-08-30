@@ -40,5 +40,22 @@ export class LibrosService {
     }
 
   }
+ /*enviamos en nombre de la persona a la base de datos*/
+  async actualizarLended(idLibro,inputLended){
+    try {
+
+     let prestadoAPersona={
+        lended:inputLended,
+      }
+
+      let respuesta:any;
+      respuesta= await this.http.put(this.url+"libro/"+idLibro,prestadoAPersona).toPromise();
+      
+    } catch (e) {
+      console.log(e)
+    }
+
+  }
+
 
 }
