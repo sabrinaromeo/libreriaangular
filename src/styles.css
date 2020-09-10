@@ -11,3 +11,9 @@ h1 {
   font-family: 'Titan One', cursive;
   color: rgb(39, 34, 12);
 }
+
+.table td,
+.table th 
+{
+  padding: 0;
+}
