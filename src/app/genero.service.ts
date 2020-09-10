@@ -1,29 +1,25 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class GeneroService {
+@Injectable
+  ({
+    providedIn: 'root'
+  })
+export class GeneroService
+{
+  url = 'https://aqueous-spire-30568.herokuapp.com/';
 
-  url= 'https://aqueous-spire-30568.herokuapp.com/';
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-  async listaGeneros(){
-
-    try{ 
-    let generos:any;
-  
-      generos= await this.http.get(this.url+"genero").toPromise();
-      
-      return generos;
+  async listaGeneros()
+  {
+    try
+    {
+      return await this.http.get(this.url + "genero").toPromise();
     }
-   catch(error){
-    console.log(error);
+    catch (error)
+    {
+      console.log(error);
     }
-   }
-
-
-
+  }
 }

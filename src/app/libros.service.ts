@@ -1,61 +1,64 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class LibrosService {
+@Injectable
+  ({
+    providedIn: 'root'
+  })
+export class LibrosService
+{
 
-  url= 'https://aqueous-spire-30568.herokuapp.com/' /*establezco el servidor con el que me voy a comunicar*/
+  url = 'https://aqueous-spire-30568.herokuapp.com/' /*establezco el servidor con el que me voy a comunicar*/
 
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-
-  async guardarLibro(unLibro){
-
-    try {
-        let resultado:any;
-
-        resultado= await this.http.post( this.url+ "libro",unLibro).toPromise() ;/*establezco la comunicacion con el servidor y le digo que voy a mandarle un libro(metodo post) a la url(this url), el await inidica que vamos a esparar a que el servidor responda*/
-
-        return resultado;
-      
-    } catch (error) {
+  async guardarLibro(unLibro)
+  {
+    try
+    {
+      /*establezco la comunicacion con el servidor y le digo que voy a mandarle un libro(metodo post) a la url(this url), el await inidica que vamos a esparar a que el servidor responda*/
+      return await this.http.post(this.url + "libro", unLibro).toPromise();
+    }
+    catch (error)
+    {
       console.log(error);
-      
     }
   }
 
-   async listaDeLibros(){ //esta funcion pide todos los libros que tengo en mi biblioteca
-
-    try{
-      let resultado:any;
-      resultado= await this.http.get(this.url+"libro").toPromise();
-
-      return resultado;
-
-    } catch(error) {
+  /**
+   * Se pide todos los libros que tengo en mi biblioteca
+   */
+  async listaDeLibros()
+  {
+    try
+    {
+      return await this.http.get(this.url + "libro").toPromise();
+    }
+    catch (error)
+    {
       console.log(error);
     }
-
   }
- /*enviamos en nombre de la persona a la base de datos*/
-  async actualizarLended(idLibro,inputLended){
-    try {
 
-     let prestadoAPersona={
-        lended:inputLended,
+  /**
+   * Se envia en nombre de la persona a la base de datos
+   * @param idLibro 
+   * @param inputLended 
+   */
+  async actualizarLended(idLibro, inputLended)
+  {
+    try
+    {
+      let prestadoAPersona =
+      {
+        lended: inputLended,
       }
 
-      let respuesta:any;
-      respuesta= await this.http.put(this.url+"libro/"+idLibro,prestadoAPersona).toPromise();
-      
-    } catch (e) {
+      await this.http.put(this.url + "libro/" + idLibro, prestadoAPersona).toPromise();
+    }
+    catch (e)
+    {
       console.log(e)
     }
-
   }
-
-
 }

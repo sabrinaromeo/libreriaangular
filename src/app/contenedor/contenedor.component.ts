@@ -46,7 +46,6 @@ export class ContenedorComponent implements OnInit
    */
   getGenderById(value: string): string
   {
-    console.log('value:' + value);
     let aux: string = 'none';
     this.generos.forEach(genero =>
     {
