@@ -32,7 +32,7 @@
                 <div class="form-group row">
                     <label for="gender" class="col-sm-2 col-form-label">Genero</label>
                     <div class="col-sm-2">
-                        <select name="gender" id="gender" [(ngModel)]="book.gender" class="custom-select mr-sm-2">
+                        <select name="gender" id="gender" [(ngModel)]="book.gender" class="form-control form-control-sm">
                             <option *ngFor="let genero of genders" [value]="genero.id" [name]='genero.name'>{{genero.name}}</option>
                         </select>
                     </div>
