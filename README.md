@@ -1,3 +1,7 @@
+# Trabajo Práctico Angular
+
+Marco Andres Faccio || Nicolas Perez || Matias Cappato || Julian Sanchez || Sabrina Romeo
+
 # Biblioteca
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
